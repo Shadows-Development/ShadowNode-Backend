@@ -1,0 +1,35 @@
+name: Feature Request
+description: Request a new feature or improvement.
+
+labels:
+  - enhancement
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Description
+
+        - What new feature or functionality would you like to request?
+        - Why is this feature needed?
+
+  - type: input
+    attributes:
+      label: "Use Case"
+      description: "How would this feature improve the system? Describe a specific use case or scenario."
+
+  - type: input
+    attributes:
+      label: "Proposed Solution"
+      description: "Do you have a suggested approach or idea for implementing this feature? Please describe."
+      placeholder: "Include any potential libraries, tools, or approaches you believe would be helpful."
+
+  - type: input
+    attributes:
+      label: "Alternatives Considered"
+      description: "Have you considered any alternative solutions? If so, describe them and explain why they were not chosen."
+
+  - type: input
+    attributes:
+      label: "Additional Information"
+      description: "Any additional context, diagrams, or screenshots that might help in implementing this feature."
