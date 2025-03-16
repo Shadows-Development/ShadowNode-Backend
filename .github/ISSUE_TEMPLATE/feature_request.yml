@@ -5,13 +5,11 @@ labels:
   - enhancement
 
 body:
-  - type: markdown
+  - type: input
     attributes:
-      value: |
-        ## Description
-
-        - What new feature or functionality would you like to request?
-        - Why is this feature needed?
+      label: "Description"
+      description: "- What new feature or functionality would you like to request? |
+        - Why is this feature needed?"
 
   - type: input
     attributes:
