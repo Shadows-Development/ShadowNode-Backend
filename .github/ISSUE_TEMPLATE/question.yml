@@ -1,0 +1,29 @@
+name: General Question
+description: Ask a general question about the project.
+
+labels:
+  - question
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Description
+
+        - What is your question regarding the project?
+        - If you're experiencing an issue or error, please describe it in detail.
+
+  - type: input
+    attributes:
+      label: "Environment"
+      description: "Provide environment details if relevant."
+      placeholder: |
+        - **Operating System**: (e.g., Ubuntu 20.04, Windows 10)
+        - **Docker Version**: (e.g., 20.10.7)
+        - **Backend Version**: (e.g., 1.0.0)
+        - **Node.js Version**: (e.g., 14.x)
+
+  - type: input
+    attributes:
+      label: "Additional Information"
+      description: "Provide any additional details that might help others understand the question or context better."
