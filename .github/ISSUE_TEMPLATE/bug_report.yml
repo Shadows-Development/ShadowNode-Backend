@@ -7,54 +7,51 @@ labels:
 body:
   - type: markdown
     attributes:
-      value: |
-        ## Description
+      value: "## 🐛 Bug Report\nDescribe the issue with ShadowNode."
 
-        - **What happened?** Describe the issue or unexpected behavior.
-        - **When did it happen?** Include specific steps to reproduce or a timeline.
-        - **Where did it happen?** Mention the specific part of the system (e.g., API, Docker integration, etc.).
-        - **Why is it a problem?** What impact does this bug have on the system?
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "Describe the Bug"
+      description: "Provide a clear and concise description of the problem."
+      placeholder: "When I run ShadowNode, it crashes because..."
+    validations:
+      required: true
 
-  - type: input
+  - type: textarea
+    id: steps-to-reproduce
     attributes:
       label: "Steps to Reproduce"
-      description: "Provide a list of steps to reproduce the issue."
-      placeholder: |
-        1. Step 1
-        
-        2. Step 2
-        
-        3. Step 3
-        
-        4. Add more steps if necessary
+      description: "List the steps needed to reproduce the bug."
+    validations:
+      required: true
 
-  - type: input
+  - type: textarea
+    id: expected-behavior
     attributes:
       label: "Expected Behavior"
-      description: "What should happen if everything works correctly?"
+      description: "What should have happened instead?"
+      placeholder: "The expected result was..."
+    validations:
+      required: true
 
-  - type: input
+  - type: textarea
+    id: logs
     attributes:
-      label: "Actual Behavior"
-      description: "What actually happened?"
+      label: "Logs & Screenshots"
+      description: "Paste any relevant error logs or screenshots."
+      placeholder: "Paste logs from the console here..."
+    validations:
+      required: false
 
-  - type: input
+  - type: dropdown
+    id: severity
     attributes:
-      label: "Logs and Error Messages"
-      description: "Paste any relevant error messages, stack traces, or logs here."
-      placeholder: "Include Docker logs, server logs, or API responses."
-
-  - type: input
-    attributes:
-      label: "Environment"
-      description: "Provide your environment details."
-      placeholder: |
-        - **Operating System**: (e.g., Ubuntu 20.04, Windows 10)
-        - **Docker Version**: (e.g., 20.10.7)
-        - **Backend Version**: (e.g., 1.0.0)
-        - **Node.js Version**: (e.g., 14.x)
-
-  - type: input
-    attributes:
-      label: "Additional Information"
-      description: "Any additional context, screenshots, or details that could help identify the root cause of the issue."
+      label: "Severity Level"
+      description: "How severe is the bug?"
+      options:
+        - "🟢 Minor - Small issue, does not affect usage"
+        - "🟡 Major - Affects functionality, but not breaking"
+        - "🔴 Critical - Prevents usage completely"
+    validations:
+      required: true
