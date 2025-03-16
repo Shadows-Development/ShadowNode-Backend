@@ -1,39 +1,57 @@
-# Bug Report
+name: Bug Report
+description: Report a bug or unexpected behavior.
 
-## Description
+labels:
+  - bug
 
-- **What happened**? Describe the issue or unexpected behavior.
-- **When did it happen**? Include specific steps to reproduce or a timeline.
-- **Where did it happen**? Mention the specific part of the system (e.g., API, Docker integration, etc.).
-- **Why is it a problem**? What impact does this bug have on the system?
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Description
 
-## Steps to Reproduce
+        - **What happened?** Describe the issue or unexpected behavior.
+        - **When did it happen?** Include specific steps to reproduce or a timeline.
+        - **Where did it happen?** Mention the specific part of the system (e.g., API, Docker integration, etc.).
+        - **Why is it a problem?** What impact does this bug have on the system?
 
-1. Step 1
-2. Step 2
-3. Step 3
-4. Add more steps if necessary
+  - type: input
+    attributes:
+      label: "Steps to Reproduce"
+      description: "Provide a list of steps to reproduce the issue."
+      placeholder: |
+        1. Step 1
+        2. Step 2
+        3. Step 3
+        4. Add more steps if necessary
 
-## Expected Behavior
+  - type: input
+    attributes:
+      label: "Expected Behavior"
+      description: "What should happen if everything works correctly?"
 
-- What **should** happen if everything works correctly?
+  - type: input
+    attributes:
+      label: "Actual Behavior"
+      description: "What actually happened?"
 
-## Actual Behavior
+  - type: input
+    attributes:
+      label: "Logs and Error Messages"
+      description: "Paste any relevant error messages, stack traces, or logs here."
+      placeholder: "Include Docker logs, server logs, or API responses."
 
-- What **actually** happened?
+  - type: input
+    attributes:
+      label: "Environment"
+      description: "Provide your environment details."
+      placeholder: |
+        - **Operating System**: (e.g., Ubuntu 20.04, Windows 10)
+        - **Docker Version**: (e.g., 20.10.7)
+        - **Backend Version**: (e.g., 1.0.0)
+        - **Node.js Version**: (e.g., 14.x)
 
-## Logs and Error Messages
-
-- Paste any relevant error messages, stack traces, or logs here.
-- If applicable, include Docker logs, server logs, or API responses.
-
-## Environment
-
-- **Operating System**: (e.g., Ubuntu 20.04, Windows 10)
-- **Docker Version**: (e.g., 20.10.7)
-- **Backend Version**: (e.g., 1.0.0)
-- **Node.js Version**: (e.g., 14.x)
-
-## Additional Information
-
-- Any additional context, screenshots, or details that could help identify the root cause of the issue.
+  - type: input
+    attributes:
+      label: "Additional Information"
+      description: "Any additional context, screenshots, or details that could help identify the root cause of the issue."
