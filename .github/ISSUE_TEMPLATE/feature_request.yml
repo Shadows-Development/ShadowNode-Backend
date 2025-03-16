@@ -1,32 +1,48 @@
-name: Feature Request
-description: Request a new feature or improvement.
-
-labels:
-  - enhancement
+name: "🚀 Feature Request"
+description: "Suggest a new feature or improvement"
+title: "[Feature]: "
+labels: ["enhancement"]
 
 body:
-  - type: input
+  - type: markdown
     attributes:
-      label: "Description"
-      description: "- What new feature or functionality would you like to request? Why is this feature needed?"
+      value: "## 🚀 Feature Request\nSuggest a new feature or improvement for ShadowNode."
+      
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: "Describe the Feature"
+      description: "Explain what the feature is and why it's useful."
+      placeholder: "I would like ShadowNode to..."
+    validations:
+      required: true
 
-  - type: input
+  - type: textarea
+    id: use-case
     attributes:
       label: "Use Case"
-      description: "How would this feature improve the system? Describe a specific use case or scenario."
+      description: "How will this feature be used?"
+      placeholder: "This feature will help users by..."
+    validations:
+      required: true
 
-  - type: input
-    attributes:
-      label: "Proposed Solution"
-      description: "Do you have a suggested approach or idea for implementing this feature? Please describe."
-      placeholder: "Include any potential libraries, tools, or approaches you believe would be helpful."
-
-  - type: input
+  - type: textarea
+    id: alternatives
     attributes:
       label: "Alternatives Considered"
-      description: "Have you considered any alternative solutions? If so, describe them and explain why they were not chosen."
+      description: "Are there any alternative solutions?"
+      placeholder: "Another way to achieve this is..."
+    validations:
+      required: false
 
-  - type: input
+  - type: dropdown
+    id: priority
     attributes:
-      label: "Additional Information"
-      description: "Any additional context, diagrams, or screenshots that might help in implementing this feature."
+      label: "Priority"
+      description: "How urgent is this feature?"
+      options:
+        - "🔵 Low - Nice to have"
+        - "🟡 Medium - Needed but not urgent"
+        - "🔴 High - Critical feature"
+    validations:
+      required: true
